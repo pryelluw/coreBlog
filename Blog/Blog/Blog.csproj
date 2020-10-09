@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <UserSecretsId>aspnet-coreBlog-575397A7-25D9-4516-BA59-32732EEDB5F3</UserSecretsId>
+    <UserSecretsId>aspnet-Blog-A4F24D56-7A9F-4C95-A2BE-D9CE88593A12</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -10,10 +10,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.8" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.8" />
-    <PackageReference Include="Slugify.Core" Version="2.3.0" />
   </ItemGroup>
 
 </Project>
