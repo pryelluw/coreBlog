@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Blog.Models;
+using Blog.ViewModels;
 
 namespace Blog.Controllers
 {
@@ -13,14 +14,26 @@ namespace Blog.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private readonly PostContext _context;
+
+
+        public HomeController(PostContext context, ILogger<HomeController> logger)
         {
+            _context = context;
             _logger = logger;
+            
         }
 
         public IActionResult Index()
         {
-            return View();
+            var posts = _context.Posts.ToList(); // all published posts
+
+            PostViewModel postViewModel = new PostViewModel()
+            {
+               Posts = posts
+            };
+
+            return View(postViewModel);
         }
 
         public IActionResult Privacy()

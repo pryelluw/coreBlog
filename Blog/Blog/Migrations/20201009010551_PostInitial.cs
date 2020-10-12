@@ -11,7 +11,7 @@ namespace Blog.Migrations
                 name: "Posts",
                 columns: table => new
                 {
-                    Id = table.Column<string>(nullable: false),
+                    Id = table.Column<int>(nullable: false),
                     Title = table.Column<string>(nullable: true),
                     Slug = table.Column<string>(nullable: true),
                     Body = table.Column<string>(nullable: true),
